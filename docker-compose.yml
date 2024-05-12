@@ -1,0 +1,22 @@
+services:
+  back:
+    build: ./back_end
+    command: python /code/back_end/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    # depends_on:
+    #   - db
+
+  front:
+    build: 
+      context: ./front_end
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/code
+    depends_on:
+      - back
+    command: npm run dev

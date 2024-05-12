@@ -1,0 +1,68 @@
+body{
+  margin:0;
+}
+#root {
+  margin:0;
+  padding:0;
+}
+#header{
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  align-content: center;
+  align-items: center;
+}
+.logo{
+  cursor:pointer;
+}
+.botones_header button:first-child{
+  margin-right:0.5rem;
+}
+.botones_header > button{
+background: #FDDA24;
+  border-radius: 60px;
+  color: #2C2A29;
+  font-weight: bold;
+  line-height: normal;
+  display: inline-block;
+  padding: 13px 19px;
+  border:none;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.1);
+}
+.botones_header >button:hover{
+  cursor:pointer;
+box-shadow: 0 1px 10px 0 rgba(0,0,0,0.14),0 3px 8px 0 rgba(0,0,0,0.11);
+}
+.formContainer{
+  display:'flex';
+  justify-content:'center';
+  width:calc(100vh-3rem);
+  padding:3rem;
+  min-width:400px;
+}
+@keyframes spinner {
+  0% {
+    transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0) rotate(360deg);
+  }
+}
+.spin::before {
+  animation: 1.5s linear infinite spinner;
+  animation-play-state: inherit;
+  border: solid 5px #cfd0d1;
+  border-bottom-color:#FDDA24;
+  border-radius: 50%;
+  content: "";
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  will-change: transform;
+}
+.spinContainer{
+  display:flex;
+}
