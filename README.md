@@ -1,2 +1,4 @@
-Para ejecutar Desarrollo con Docker:
-docker compose up --build
+### Para ejecutar Desarrollo con Docker:
+```console
+  docker compose up --build
+```
